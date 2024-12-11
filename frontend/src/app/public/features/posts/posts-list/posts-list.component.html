@@ -1,0 +1,13 @@
+<div class="py-10 grid xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-10">
+    <div *ngFor="let post of posts">
+      <div class="bg-white rounded-xl px-10 py-5 post shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <a [routerLink]="'/post/' + post.slug" class="text-gray-800 block font-extrabold text-xl mb-4">
+            {{ post.title }}
+          </a>
+          
+        <a href="#" class="underline text-sm">{{ post.content }}</a>
+        <div class="mt-2 text-sm text-gray">{{ post.createdAt }}</div>
+      </div>
+    </div>
+  </div>
+  
